@@ -34,7 +34,7 @@
 		}
 	    
 		// asociar los parámetros
-		$stmt->bind_param('ssssssss',$POST['nif'],$_POST['nombre'],
+		$stmt->bind_param('ssssssss',$_POST['nif'],$_POST['nombre'],
 		$_POST['apellido1'],$_POST['apellido2'],$_POST['email'],
 		$_POST['telefono'],$_POST['usuario'],$_POST['password']);
 		
@@ -64,10 +64,10 @@
                 <td>2o Apellido</td>
                 <td><input type='text' name='apellido2'></textarea></td>
             </tr>
-            <tr>
+<!--            <tr>
                 <td>login</td>
                 <td><input type='text' name='login' /></td>
-            </tr>
+            </tr>-->
             <tr>
                 <td>email</td>
                 <td><input type='text' name='email' /></td>
