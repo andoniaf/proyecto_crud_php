@@ -1,2 +1,2 @@
 # proyecto_crud
-Microaplicacion para formacion de PHP en la asignatura de GBD.
+Microaplicacion para la formacion de PHP en la asignatura de GBD.
