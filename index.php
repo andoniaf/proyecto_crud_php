@@ -33,7 +33,19 @@
     </nav>
 	<div id="content">
 	<?php
+	    $default = 'lista'; //nuestra página por defecto.
+	    
+	    $action = isset($_GET['action']) ? $_GET['action'] : $default; 
 
+	    //obtenemos la página que queremos mostrar.
+	    $accion = basename($accion); //nos quedamos solo con el nombre.
+	
+	    if (!file_exists($accion . '.php')) { //comprobamos que el fichero exista
+	    $accion = $default; //si no existe mostramos la página por defecto
+	    //NOTA: Hacer la página 404
+	    }
+	    
+	    include( $accion . '.php'); //y ahora mostramos la pagina llamada
 	?>
 	</div>
 	<div id="footer">
