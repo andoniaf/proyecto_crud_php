@@ -34,8 +34,9 @@ float: left;
 font-size: 55px;
 margin: 0 auto;
 text-align: center;
-width: 50%;
+width: 70%;
 padding-top: 25px;
+text-shadow:5px 5px 10px black;
 }
 
 #content {
@@ -56,14 +57,3 @@ left:0;
 text-align: center;
 }
 
-#subtitle{
-padding: 20px;
-}
-
-#footer a {
-color: white;
-width:100%;
-font-size: 24px;
-text-decoration: none;
-top:20px;
-}

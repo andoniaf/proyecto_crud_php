@@ -18,6 +18,7 @@
         </script>
     </head>
     <body>
+	<div class="container">
     <div id="wrapper">
 	<div id="header">
 	    <div id="logo">
@@ -38,14 +39,14 @@
 	    $action = isset($_GET['action']) ? $_GET['action'] : $default; 
 
 	    //obtenemos la página que queremos mostrar.
-	    $accion = basename($accion); //nos quedamos solo con el nombre.
+	    $action = basename($action); //nos quedamos solo con el nombre.
 	
-	    if (!file_exists($accion . '.php')) { //comprobamos que el fichero exista
-	    $accion = $default; //si no existe mostramos la página por defecto
+	    if (!file_exists($action . '.php')) { //comprobamos que el fichero exista
+	    $action = $default; //si no existe mostramos la página por defecto
 	    //NOTA: Hacer la página 404
 	    }
 	    
-	    include( $accion . '.php'); //y ahora mostramos la pagina llamada
+	    include( $action . '.php'); //y ahora mostramos la pagina llamada
 	?>
 	</div>
 	<div id="footer">
@@ -53,5 +54,6 @@
 	    <div class="pull-right"><kbd>Andoni Alonso (2015)</kbd></div>
 	</div>
     </div>
+	</div>
     </body>
 </html>

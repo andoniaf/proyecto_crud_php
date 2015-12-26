@@ -1,3 +1,4 @@
+<h1>Lista Clientes</h1>
 <?php
 // incluir la conexión a la base de datos
 include 'conexion.php';
@@ -30,7 +31,7 @@ echo "<a href='index.php?action=altas'>Alta cliente</a>";
 echo "</div>";
 
 //cabecera de los datos mostrados
-echo "<table>"; //start table
+echo "<table class="."table>"; //start table
 //creating our table heading
 echo "<tr>";
 echo "<th>NIF</th>";
