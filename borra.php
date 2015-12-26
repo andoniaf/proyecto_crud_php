@@ -5,7 +5,7 @@ include 'conexion.php';
 
 // coger el parámetro que nos permitirá identificar el registro
 
-$id=isset($_GET['id']) ? $_GET['id'] : die('ERROR: Registro no encontrado.');
+$id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Registro no encontrado.');
 
 // Consulta de borrado
 $query = "DELETE FROM clientes WHERE id = ?";

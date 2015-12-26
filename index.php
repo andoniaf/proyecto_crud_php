@@ -8,7 +8,7 @@
 		if (answer) {
 		// si el usuario hace click en ok, 
 		// se ejecutar borra.php
-		window.location = 'index.php?accion=borra&id=' + id;
+		window.location = 'borra.php?id=' + id;
 		}
             }
         </script> 
@@ -22,7 +22,7 @@
 	$action = isset($_GET['action']) ? $_GET['action'] : "";
 	// si viene de borra.php
         if ($action == 'deleted') {
-            echo "<div>El registro cliente ha sido borrado.</div>";
+            echo "<div>El registro cliente ha sido borrado.</div><br>";
         }
 	
 	// Elegir los datos que deseamos recuperar de la tabla
