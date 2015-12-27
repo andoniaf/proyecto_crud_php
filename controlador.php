@@ -10,7 +10,7 @@ if (!login_check($conexion)) { //no estas autorizado
     if (isset($usuario, $password)) {
 	if (login($usuario, $password, $conexion) == true) {
 	    // Éxito
-	    $action = "lista"; //acción por defecto
+	    $action = $default_action; //acción por defecto
 	} else {
 	    // Login error: no coinciden usuario y password
 	    $action = "login";
