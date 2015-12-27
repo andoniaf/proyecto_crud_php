@@ -34,19 +34,8 @@
     </nav>
 	<div id="content">
 	<?php
-	    $default = 'lista'; //nuestra página por defecto.
-	    
-	    $action = isset($_GET['action']) ? $_GET['action'] : $default; 
-
-	    //obtenemos la página que queremos mostrar.
-	    $action = basename($action); //nos quedamos solo con el nombre.
-	
-	    if (!file_exists($action . '.php')) { //comprobamos que el fichero exista
-	    $action = $default; //si no existe mostramos la página por defecto
-	    //NOTA: Hacer la página 404
-	    }
-	    
-	    include( $action . '.php'); //y ahora mostramos la pagina llamada
+	// controlador.php se encargara de mostrar el 'contenido' correspondiente
+	    include('controlador.php'); 
 	?>
 	</div>
 	<div id="footer">
