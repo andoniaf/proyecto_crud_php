@@ -11,6 +11,10 @@ if (!login_check($conexion)) { //no estas autorizado
 	if (login($usuario, $password, $conexion) == true) {
 	    // Éxito
 	    $action = $default_action; //acción por defecto
+	    
+	    echo "<div class=\"logout\"> <a href=\"index.php?action=logout\"> logout
+		{$_SESSION['usuario']} </a></div>";
+	    
 	} else {
 	    // Login error: no coinciden usuario y password
 	    $action = "login";
@@ -21,6 +25,13 @@ if (!login_check($conexion)) { //no estas autorizado
     }
 } else { // si estas autorizado
     $action = basename(filter_input(INPUT_GET, 'action', $filter = FILTER_SANITIZE_STRING));
+    
+    // In case para definir la accion default segun 'login/logout'
+    switch ($action){
+    case 'login': $action = $default_action;break;
+    case 'logout':logout();$action='login';
+    }
+    
     if (!isset($action)) {
 	$action = 'lista'; //acción por defecto $default_action = "lista"
     }

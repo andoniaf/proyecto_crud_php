@@ -8,7 +8,7 @@ function sec_session_start() {
     // Obliga a la sesión a utilizar solo cookies.
     // Habilitar este ajuste previene ataques que impican pasar el id de sesión en la URL.
     if (ini_set('session.use_only_cookies', 1) === FALSE) {
-    $accion = "error";
+    $action = "error";
     $error="No puedo iniciar una sesion segura (ini_set)";
     }
 
@@ -83,7 +83,7 @@ function login($usuario, $password, $conexion) {
 		// Password no es correcto. Registramos el intento
 		$now = time();
 		$conexion->query("INSERT INTO login_attempts(id, time)
-		VALUES ('$id', '$now')");
+				    VALUES ('$id', '$now')");
 		return false;
 	    }
 	}
@@ -113,5 +113,20 @@ function checkbrute($id, $conexion) {
 	    return false;
 	}
     }
+}
+
+function logout() {
+    // Unset all session values
+    $_SESSION = array();
+    
+    // get session parameters
+    $params = session_get_cookie_params();
+
+    // Delete the actual cookie.
+    setcookie(session_name(), '', time() - 42000, $params["path"], $params["domain"],
+    $params["secure"], $params["httponly"]);
+    
+    // Destroy session 
+    session_destroy();
 }
 ?>
