@@ -1,8 +1,4 @@
 <?php
-// incluir la conexión a la base de datos
-
-include 'conexion.php';
-
 // coger el parámetro que nos permitirá identificar el registro
 
 $id = isset($_GET['id']) ? $_GET['id'] : die('ERROR: Registro no encontrado.');

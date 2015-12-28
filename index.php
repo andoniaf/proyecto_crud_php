@@ -2,10 +2,12 @@
     <head>
         <meta charset="UTF-8">
         <title>Proyecto CRUD</title>
-	    <link media="all" href="css/style.css" rel="stylesheet" type="text/css"></link>
+	<link media="all" href="css/style.css" rel="stylesheet" type="text/css"></link>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script type="text/JavaScript" src="js/sha512.js"></script>
+	<script type="text/JavaScript" src="js/forms.js"></script>
         <script type="text/JavaScript">
             function borra_cliente(id){
         		var answer = confirm('¿Estás seguro que deseas borrar el cliente?');

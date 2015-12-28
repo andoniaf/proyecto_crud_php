@@ -9,7 +9,7 @@ function formhash(form, password) {
     p.value = hex_sha512(password.value);
  
     // Make sure the plaintext password doesn't get sent. 
-    password.value = "aaaa"; //un valor para despistar
+    password.value = "artoo"; //un valor para despistar
  
     // Finally submit the form. 
     form.submit();

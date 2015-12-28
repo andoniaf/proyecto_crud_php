@@ -1,8 +1,5 @@
 <h1>Lista Clientes</h1>
 <?php
-// incluir la conexión a la base de datos
-include 'conexion.php';
-
 $action = isset($_GET['action']) ? $_GET['action'] : "";
 
 // si viene de borra.php
