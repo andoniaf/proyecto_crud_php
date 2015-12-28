@@ -1,5 +1,4 @@
 <?php
-
 function sec_session_start() {
     $session_name = 'sec_session_id'; //Asignamos un nombre de sesión
     $secure = false; //mejor en config.php Lo ideal sería true para trabajar con https
@@ -112,6 +111,45 @@ function checkbrute($id, $conexion) {
 	} else {
 	    return false;
 	}
+    }
+}
+
+function login_check($conexion) {
+// Comprueba que todas las variables de sesión estén inicializadas
+    if (isset($_SESSION['id'], $_SESSION['usuario'], $_SESSION['login_string'])) {
+        $id = $_SESSION['id'];
+        $login_string = $_SESSION['login_string'];
+        $usuario = $_SESSION['usuario'];
+// Obtener el user-agent string.
+        $user_browser = $_SERVER['HTTP_USER_AGENT'];
+        if ($stmt = $conexion->prepare("SELECT password 
+                                      FROM clientes 
+                                      WHERE id = ? LIMIT 1")) {
+            $stmt->bind_param('i', $id);
+            $stmt->execute();
+            $stmt->store_result();
+            if ($stmt->num_rows == 1) {
+                $stmt->bind_result($password);
+                $stmt->fetch();
+                $login_check = hash('sha512', $password . $user_browser);
+                if ($login_check == $login_string) {
+                    // coinciden 
+                    return true;
+                } else {
+                    // No está logado
+                    return false;
+                }
+            } else {
+// No está logado el usuario no existe
+                return false;
+            }
+        } else {
+// No está logado
+            return false;
+        }
+    } else {
+// No está logado
+        return false;
     }
 }
 
