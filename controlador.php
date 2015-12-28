@@ -37,10 +37,10 @@ if (!login_check($conexion)) { //no estas autorizado
     }
     
     if (!isset($action)) {
-	$action = 'lista'; //acción por defecto $default_action = "lista"
+	$action = $default_action; //acción por defecto $default_action = "lista"
     }
     if (!file_exists($action . '.php')) { //comprobamos que el fichero exista
-	$action = 'lista'; //si no existe mostramos la página por defecto
+	$action = $default_action; //si no existe mostramos la página por defecto
 	echo "Operación no soportada: 404";
     }
 }
