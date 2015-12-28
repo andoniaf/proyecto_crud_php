@@ -18,6 +18,10 @@ if (!login_check($conexion)) { //no estas autorizado
 	} else {
 	    // Login error: no coinciden usuario y password
 	    $action = "login";
+	    echo "<div class="."\"alert alert-danger alert-dismissable text-center clear\" id=\"login_fail\"".">
+		<button type="."button"." class="."close"." data-dismiss="."alert".">&times;</button>
+		    Login incorrecto! Revisa los datos.
+		</div>";
 	}
     } else {
 	//significa que aún no has valores para usuario y password
