@@ -6,7 +6,7 @@ height:100%;
 }
 
 #wrapper {
-min-height:100%;
+min-width: 910px;
 position:relative;
 background-color: #c23e3e;
 }
@@ -64,3 +64,11 @@ text-align: center;
     padding-bottom: 5px; 
    }
 
+.margXL{
+    margin-left: 195px;
+}
+
+#inputlogin{
+    left: 75px;
+    padding: 4px 0px;
+}
