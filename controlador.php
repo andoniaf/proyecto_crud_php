@@ -28,6 +28,7 @@ if (!login_check($conexion)) { //no estas autorizado
 	$action = "login";
     }
 } else { // si estas autorizado
+    
     $action = basename(filter_input(INPUT_GET, 'action', $filter = FILTER_SANITIZE_STRING));
     
     // In case para definir la accion default segun 'login/logout'
@@ -35,13 +36,13 @@ if (!login_check($conexion)) { //no estas autorizado
     case 'login': $action = $default_action;break;
     case 'logout':logout();$action='login';
     }
-    echo "<div class=\"logout\"> <a href=\"index.php?action=logout\"> logout {$_SESSION['usuario']} </a></div>";
+    echo "<div class=\"logout\"> <a href=\"index.php?action=logout\"> Desconectar {$_SESSION['usuario']} </a></div><br>";
     if (!isset($action)) {
 	$action = $default_action; //acción por defecto $default_action = "lista"
     }
     if (!file_exists($action . '.php')) { //comprobamos que el fichero exista
 	$action = $default_action; //si no existe mostramos la página por defecto
-	echo "Operación no soportada: 404";
+	echo "Operación no soportada: 404 [Prueba: Default is ". $default_action ." ] and action= ". $action ."!";
     }
 }
 include( $action . '.php'); //y ahora mostramos la pagina llamada

@@ -1,3 +1,4 @@
+<h1>Editar cliente</h1>
 <?php
 // coger el parámetro que nos permitirá identificar el registro
 // isset() es una función PHP usado para verificar si una variable tiene valor o no
@@ -84,7 +85,7 @@ border='0'>
 	    <td></td>
 	    <td>
 		<input type='submit' value='Guardar' />
-		<a href='index.php'>Volver a Inicio</a>
+		<a href="./index.php?action=<?php echo $default_action ?>">Volver a Inicio</a>
 	    </td>
 	</tr>
     </table>

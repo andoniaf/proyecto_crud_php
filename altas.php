@@ -79,7 +79,7 @@
 	<td></td>
 	<td>
 	<input type="submit" name="save" value="Save" />
-	<a href="./index.php">Volver al inicio</a>
+	<a href="./index.php?action=<?php echo $default_action ?>">Volver al inicio</a>
 	</td>
     </tr>
 </table>
