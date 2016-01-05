@@ -31,13 +31,14 @@
 	    </div>
 
 	</div>
-    <nav class="navbar navbar-default">
-        <!-- http://getbootstrap.com/customize/?id=3f3323b47a99e302d879#navbar -->
+    <nav class="melolbar">
+        <div><a href="index.php?action=login">Inicio</a></div>
+        <div><a href="index.php?action=altas">Altas</a></div>
     </nav>
 	<div id="content">
 	<?php
 	// controlador.php se encargara de mostrar el 'contenido' correspondiente
-	    include('controlador.php'); 
+	    include('controlador.php');
 	?>
 	</div>
 	<div id="footer">

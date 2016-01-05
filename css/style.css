@@ -61,7 +61,7 @@ text-align: center;
     width: 25%;
     padding-left: 5px;
     padding-top: 5px;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
    }
 
 .margXL{
@@ -71,4 +71,29 @@ text-align: center;
 #inputlogin{
     left: 75px;
     padding: 4px 0px;
+}
+
+.melolbar{
+    padding: 13px;
+    background-color: #2aaa2b;
+    border-top: 2px solid hsl(120, 31%, 48%);
+    border-bottom: 2px solid #257425;
+    border-left: 2px solid hsl(120, 31%, 48%);
+    border-right: 2px solid #257425;
+    border-radius: 4px;
+    }
+
+.melolbar div{
+    display: inline;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background-color: #3ec23f;
+    border: 1px solid #257425;
+    border-bottom: 2px solid #257425;
+    border-right: 2px solid #257425;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.melolbar a{
+    color: #1c581c;
 }
