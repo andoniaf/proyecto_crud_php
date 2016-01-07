@@ -24,7 +24,7 @@
     <div id="wrapper">
 	<div id="header">
 	    <div id="logo">
-		<img src="img/logo_web.jpeg"></img>
+		<img src="img/logo_web.png"></img>
 	    </div>
 	    <div id="title">
 		Manager Emulator LOL

@@ -1,8 +1,8 @@
 <?php
 
 // parámetros usado para conectar a la base de datos
-$host = "";
-$db_name = "";
-$username = "";
-$password = "";
+$host = "localhost";
+$db_name = "proyecto";
+$username = "root";
+$password = "ausias";
 
