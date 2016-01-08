@@ -84,6 +84,7 @@ text-align: center;
     border-left: 2px solid hsl(120, 31%, 48%);
     border-right: 2px solid #257425;
     border-radius: 4px;
+    position: relative;
     }
 
 .melolbar div{
@@ -100,3 +101,9 @@ text-align: center;
 .melolbar a{
     color: #1c581c;
 }
+
+.melolbar #pipati {
+    position: absolute;
+    right:5px;
+    top: 4px;
+    }

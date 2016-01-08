@@ -8,6 +8,7 @@
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 	<script type="text/JavaScript" src="js/sha512.js"></script>
 	<script type="text/JavaScript" src="js/forms.js"></script>
+    <script type="text/JavaScript" src="js/pipati.js"></script>
         <script type="text/JavaScript">
             function borra_cliente(id){
         		var answer = confirm('¿Estás seguro que deseas borrar el cliente?');
@@ -34,6 +35,7 @@
     <nav class="melolbar">
         <div><a href="index.php?action=login">Inicio</a></div>
         <div><a href="index.php?action=altas">Altas</a></div>
+        <div id="pipati"><button onclick="pipati()">¿Quieres jugar?</button></div>
     </nav>
 	<div id="content">
 	<?php
