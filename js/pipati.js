@@ -2,10 +2,10 @@ function pipati(){
     var usuarioElige = prompt("piedra, papel o tijera?");
     var computadoraElige = Math.random();
     if (computadoraElige <0.34) {
-    	computadoraElige = "papel";
+    	computadoraElige = "piedra";
     }
     else if(computadoraElige <=0.67) {
-    	computadoraElige = "piedra";
+    	computadoraElige = "papel";
     }
     else{
     	computadoraElige = "tijera";
@@ -27,6 +27,5 @@ function pipati(){
             }
 
     };
-
         comparar(usuarioElige, computadoraElige);
 }
